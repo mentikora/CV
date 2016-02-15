@@ -10,7 +10,30 @@ body{
 	font-family: 'Roboto Slab', serif;
 	color: #424440;
 }
+.btn_style{
+	display: inline-block;
+	padding: 8px;
+	
+	opacity: .9;
 
+	font-weight: 400;
+	color: #fff;
+
+	background: url('images/btn_bg.png') no-repeat 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+	.btn_style:hover{
+		text-decoration: none;
+		color: #fff;
+		opacity: 1;
+	}
 /* header */
 header#header {
 	background: url('images/header.png') no-repeat 50%;
@@ -37,7 +60,6 @@ header#header {
 /* content */
 #content_wrapper{
 	margin-top: 30px;
-	/*margin-bottom: 30px;*/
 }
 
 /* item */
@@ -90,14 +112,6 @@ header#header {
 		.item .views {
 			margin-top: 10px;
 		}
-		.item .continue_reading{
-			padding: 10px 25px;
-			
-			display: inline-block;
-
-			background: #6E8CA6;
-			color: #fff;
-		}
 
 	/* item on view */
 	.item .view_title{
@@ -108,32 +122,4 @@ header#header {
 		margin: 0;
 	}
 
-/* preview */
-#preload{
-	width: 100%;
-	height: 100vh;
-}
-	#preload aside {
-		width: 250px;
-		height: 100vh;
-		position: fixed;
-		top: 0;
-		right: 0;
-
-		background: rgba(0,0,0, .3);
-	}
-		#preload p{
-			padding: 15px;
-			color: #fff;
-		}
-		#preload img{
-			width: 100px;
-			margin: 0 auto;
-		}
-	#preload .preload_off_btn{
-		display: block;
-		padding: 16px;
-		
-		text-align: center;
-	}
 	

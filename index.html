@@ -4,28 +4,21 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Computer vision</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/application.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.tubular.js"></script>
-    <script src="js/main.js"></script>
+
+    <!--[if IE]>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/application.css">
+      <![endif]-->
+
 </head>
 <body>
-    <!-- preload video -->
-    <div id="preload">
-        <aside>
-            <p>
-                <img src="img/site_logo.png" alt="site_logo" class="img-responsive">
-                - <i>(Open Source Computer Vision Library)</i> is an open source computer vision and machine learning software library. OpenCV was built to provide a common infrastructure for computer vision applications and to accelerate the use of machine perception in the commercial products.
-            </p>
-            <span class="preload_off_btn">Off</span>
-        </aside>    
-    </div>
+    <!--[if !IE]> -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/application.css">
+    <!-- <![endif]-->
     
     <!-- maincontent -->
-    <div id="wrapper" style="display: none;">
+    <div id="wrapper">
     <!-- start -->
     <header id="header" class="clearfix">
         <div class="container text-center">
@@ -94,7 +87,7 @@
                             </span>
                             views
                         </div>
-                        <a href="#" class="continue_reading pull-right">continue reading</a>
+                        <a href="#" class="btn_style pull-right">continue reading</a>
                     </div>
                 </div>
 
@@ -206,5 +199,10 @@
         </p>
     </footer>
     </div>
+    
+    <!-- script -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
