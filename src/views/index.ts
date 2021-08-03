@@ -1,2 +1,2 @@
 export * from './SkillBadges';
-export * from './Projects';
+export * from './Timeline';

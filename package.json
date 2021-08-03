@@ -1,7 +1,7 @@
 {
   "name": "cv-react",
   "version": "0.1.0",
-  "homepage": "https://github.com/mentikora/CV",
+  "homepage": "https://mentikora.github.io/CV",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.2",

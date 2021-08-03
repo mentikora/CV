@@ -2,8 +2,8 @@ import React from 'react';
 import Chip from '@material-ui/core/Chip';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Avatar from '@material-ui/core/Avatar';
-import LabelImportantRoundedIcon from '@material-ui/icons/LabelImportantRounded';
+
+import style from './badge.module.css';
 
 type Props = {
   skills: Array<string>;
@@ -17,18 +17,15 @@ export const SkillBadges: React.FunctionComponent<Props> = ({
     <Typography variant="h5">
       {heading}
     </Typography>
-    <Box display="flex" flexWrap="wrap" gridGap={8} mt={1}>
+    <Box display="flex" flexWrap="wrap" mt={1}>
       {
         skills.map(skill =>
         <Chip
+          className={style.badge}
           key={skill}
           label={skill}
           color="primary"
-          avatar={
-            <Avatar>
-              <LabelImportantRoundedIcon color="secondary" />
-            </Avatar>
-          }
+          variant="outlined"
         />)
       }
     </Box>
