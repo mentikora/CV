@@ -15,11 +15,18 @@ body {
   background-color: #fff;
 }
 
-.download {
+.actions {
   position: fixed;
   top: 8px;
   right: 8px;
+
+  display: flex;
+  flex-direction: column;
 }
+.actions button {
+  margin-top: 8px;
+}
+
 
 a {
   color: #226689;
@@ -29,18 +36,24 @@ a:hover {
   color: #ee7752;
 }
 
+.box > div {
+  width: 50%;
+  float: left;
+}
+
 @media print {
   .app {
     box-shadow: none;
   }
   body {
     background: #fff;
+    padding: 8px;
   }
-  .download {
+  .actions {
     display: none;
   }
   @page {
-    margin: 1cm;
+    margin: 0.3cm 1cm 0.4cm;
     size: auto; 
     page-break-before: always;
   }

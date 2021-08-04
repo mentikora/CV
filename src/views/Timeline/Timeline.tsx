@@ -53,8 +53,8 @@ export const TimeLine: React.FunctionComponent<Props> = ({
 
           {
             e.projects && <Box mt={2}>
-                {e.projects.map(project => (
-                  <Box mb={1} ml={1}>
+                {e.projects.map((project, i) => (
+                  <Box mb={1} ml={1} key={i}>
                     <Typography variant="body2">
                       <Box component="span" fontWeight="bold">
                         Project overview:

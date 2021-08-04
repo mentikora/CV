@@ -7,6 +7,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import Button from '@material-ui/core/Button';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
+import PrintIcon from '@material-ui/icons/Print';
 import Divider from '@material-ui/core/Divider';
 
 import { data } from './data';
@@ -16,10 +17,27 @@ import style from './app.module.css';
 export const App: React.FunctionComponent = () => {
   const { fullname, position, phone, location, socials, about, skillsBadges, previousJobs, education, courses, awards } = data;
   return (
-    <Box component="main" className={style.app} boxShadow={18} borderRadius={16}>
-      {window.location.search !== '?button=true' && <Button className={style.download} variant="contained" color="secondary" startIcon={<CloudDownloadIcon />}>
-        PDF
-      </Button>}
+    <Box component="main" className={style.app} boxShadow={18}>
+      {window.location.search !== '?button=true' && <div className={style.actions}>
+        <Button
+          href="./roman-horobets-cv.pdf"
+          className={style.download}
+          variant="contained"
+          color="secondary"
+          startIcon={<CloudDownloadIcon />}
+        >
+          PDF
+        </Button>
+        <Button
+          className={style.print}
+          variant="contained"
+          color="secondary"
+          onClick={() => window.print()}
+          startIcon={<PrintIcon />}
+        >
+          Print
+        </Button>
+      </div>}
 
       <Grid container spacing={2}>
 
@@ -55,9 +73,6 @@ export const App: React.FunctionComponent = () => {
             {about}
           </Typography>
         </Grid>    
-        <Grid item xs={12}>
-          <Divider />    
-        </Grid>
 
         {/* skills */}
         <Grid item xs={12}>
@@ -67,16 +82,16 @@ export const App: React.FunctionComponent = () => {
           <Divider />
         </Grid>
         <Grid item xs={12}>
-          <Grid container>
-            <Grid item md={6}>
+          <div className={style.box}>
+            <div>
               <TimeLine heading={'Education'} data={education} />
               <Typography variant="h5">Languages</Typography>
               <Typography>English (intermediate), Ukrainian (native)</Typography>
-            </Grid>
-            <Grid item md={6}>
+            </div>
+            <div>
               <TimeLine heading={'Courses'} data={courses} />
-            </Grid>
-          </Grid>
+            </div>
+          </div>
         </Grid>
         <Grid item xs={12}>
           <Divider />
